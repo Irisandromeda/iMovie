@@ -10,27 +10,31 @@ import Lottie
 
 class LoadingViewController: UIViewController {
     
-    @IBOutlet weak var startAnimation: LottieAnimationView!
-    
-    var timer: Timer?
+    @IBOutlet weak var backgroundAnimation: LottieAnimationView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        timer = Timer(timeInterval: 3, target: self, selector: #selector(startTimer), userInfo: nil, repeats: false)
-        startLottieAnimation()
+        startTimer()
+        setupSubviews()
     }
     
-    @objc private func startTimer() {
-        
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .darkContent
     }
     
-    private func startLottieAnimation() {
-        startAnimation.animation = LottieAnimation.named("startScreenLottie")
-        startAnimation.loopMode = .loop
-        startAnimation.contentMode = .scaleAspectFill
-        startAnimation.animationSpeed = 1.25
-        startAnimation.play()
+    private func setupSubviews() {
+        backgroundAnimation.startLottieAnimation("lightLoadingLottie", speed: 1.25, loopMode: .loop, contentMode: .scaleAspectFill)
+    }
+    
+    private func startTimer() {
+        Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(startApplication), userInfo: nil, repeats: false)
+    }
+    
+    @objc private func startApplication() {
+        let viewController = SignInViewController(nibName: "SignInViewController", bundle: nil)
+        viewController.modalPresentationStyle = .overFullScreen
+        present(viewController, animated: true)
     }
 
 }
