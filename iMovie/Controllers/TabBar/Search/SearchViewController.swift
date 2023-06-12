@@ -12,7 +12,14 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        setupNavigationBar()
+    }
+    
+    private func setupNavigationBar() {
+        title = "Search"
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "labelColor")!]
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "labelColor")!]
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F073A0B2A37395700559A5C /* TopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F073A092A37395700559A5C /* TopCell.swift */; };
+		4F073A0C2A37395700559A5C /* TopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F073A0A2A37395700559A5C /* TopCell.xib */; };
+		4F073A0F2A37449A00559A5C /* profileLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F073A0E2A37449A00559A5C /* profileLottie.json */; };
 		4F67977B2A33E20D007E4EA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67977A2A33E20D007E4EA9 /* AppDelegate.swift */; };
 		4F67977D2A33E20D007E4EA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67977C2A33E20D007E4EA9 /* SceneDelegate.swift */; };
 		4F6797842A33E20E007E4EA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F6797832A33E20E007E4EA9 /* Assets.xcassets */; };
@@ -56,6 +59,9 @@
 /* Begin PBXFileReference section */
 		138F2ACC43297F7C7EE1E995 /* Pods-iMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMovie.release.xcconfig"; path = "Target Support Files/Pods-iMovie/Pods-iMovie.release.xcconfig"; sourceTree = "<group>"; };
 		4C411F3F1E801021D118CE52 /* Pods_iMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F073A092A37395700559A5C /* TopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCell.swift; sourceTree = "<group>"; };
+		4F073A0A2A37395700559A5C /* TopCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopCell.xib; sourceTree = "<group>"; };
+		4F073A0E2A37449A00559A5C /* profileLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profileLottie.json; sourceTree = "<group>"; };
 		4F6797772A33E20D007E4EA9 /* iMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F67977A2A33E20D007E4EA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F67977C2A33E20D007E4EA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +128,15 @@
 				4C411F3F1E801021D118CE52 /* Pods_iMovie.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F073A0D2A37396000559A5C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4F073A092A37395700559A5C /* TopCell.swift */,
+				4F073A0A2A37395700559A5C /* TopCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		4F67976E2A33E20D007E4EA9 = {
@@ -198,6 +213,7 @@
 		4F67979B2A33E47A007E4EA9 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				4F073A0E2A37449A00559A5C /* profileLottie.json */,
 				4FF1033D2A3606FB0070332D /* successLottie.json */,
 				4F8191E22A349BC200719B54 /* darkLoadingLottie.json */,
 				4F8191E32A349BC200719B54 /* lightLoadingLottie.json */,
@@ -290,6 +306,7 @@
 			children = (
 				4FA3EB082A368B7600498942 /* ProfileViewController.swift */,
 				4FA3EB092A368B7600498942 /* ProfileViewController.xib */,
+				4F073A0D2A37396000559A5C /* Cell */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -392,6 +409,7 @@
 				4FF103262A35DEAE0070332D /* GoogleService-Info.plist in Resources */,
 				4F8192292A35546D00719B54 /* Poppins-Regular.ttf in Resources */,
 				4F81922B2A35546D00719B54 /* Poppins-Italic.ttf in Resources */,
+				4F073A0C2A37395700559A5C /* TopCell.xib in Resources */,
 				4F6797A52A33EBB6007E4EA9 /* SignUpViewController.xib in Resources */,
 				4FA3EB032A368B3300498942 /* SearchViewController.xib in Resources */,
 				4F81922F2A35546D00719B54 /* Poppins-SemiBold.ttf in Resources */,
@@ -415,6 +433,7 @@
 				4F8192342A35546D00719B54 /* Poppins-Light.ttf in Resources */,
 				4F81922E2A35546D00719B54 /* Poppins-ThinItalic.ttf in Resources */,
 				4F8192272A35546D00719B54 /* Poppins-Thin.ttf in Resources */,
+				4F073A0F2A37449A00559A5C /* profileLottie.json in Resources */,
 				4F6797922A33E268007E4EA9 /* LoadingViewController.xib in Resources */,
 				4F8192302A35546D00719B54 /* Poppins-BoldItalic.ttf in Resources */,
 			);
@@ -474,6 +493,7 @@
 				4F6797A42A33EBB6007E4EA9 /* SignUpViewController.swift in Sources */,
 				4FA3EAF02A36242200498942 /* UIViewController + Extension.swift in Sources */,
 				4F6797AC2A33F5D6007E4EA9 /* LottieAnimationView + Extension.swift in Sources */,
+				4F073A0B2A37395700559A5C /* TopCell.swift in Sources */,
 				4FA3EB0A2A368B7600498942 /* ProfileViewController.swift in Sources */,
 				4FA3EB062A368B6800498942 /* FavoritesViewController.swift in Sources */,
 				4F67977B2A33E20D007E4EA9 /* AppDelegate.swift in Sources */,

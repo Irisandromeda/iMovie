@@ -27,15 +27,15 @@ class TabBarController: UITabBarController {
         let profileViewController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
         
         viewControllers = [
-            setupViewController(searchViewController, title: "Search", image: UIImage(named: "search")!),
-            setupViewController(favoritesViewController, title: "Favorites", image: UIImage(named: "favorites")!),
-            setupViewController(profileViewController, title: "Profile", image: UIImage(named: "profile")!)
+            setupViewController(UINavigationController(rootViewController: searchViewController), title: "Search", image: UIImage(named: "search")!),
+            setupViewController(UINavigationController(rootViewController: favoritesViewController), title: "Favorites", image: UIImage(named: "favorites")!),
+            setupViewController(UINavigationController(rootViewController: profileViewController), title: "Profile", image: UIImage(named: "profile")!)
         ]
         
         tabBar.tintColor = UIColor(named: "defaultWhite")
     }
     
-    private func setupViewController(_ viewController: UIViewController, title: String, image: UIImage) -> UIViewController {
+    private func setupViewController(_ viewController: UINavigationController, title: String, image: UIImage) -> UIViewController {
         viewController.tabBarItem.title = title
         viewController.tabBarItem.image = image
         
