@@ -32,7 +32,7 @@ class LoadingViewController: UIViewController {
     }
     
     @objc private func startApplication() {
-        let viewController = SignInViewController(nibName: "SignInViewController", bundle: nil)
+        let viewController = SignUpViewController(nibName: "SignUpViewController", bundle: nil)
         viewController.modalPresentationStyle = .overFullScreen
         present(viewController, animated: true)
     }

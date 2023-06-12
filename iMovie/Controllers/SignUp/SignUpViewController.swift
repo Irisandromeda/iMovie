@@ -1,27 +1,30 @@
 //
-//  SignInViewController.swift
+//  SignUpViewController.swift
 //  iMovie
 //
-//  Created by Irisandromeda on 11.06.2023.
+//  Created by Irisandromeda on 10.06.2023.
 //
 
 import UIKit
 import Lottie
 
-class SignInViewController: UIViewController {
+class SignUpViewController: UIViewController {
     
     //Outlets
+    @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var buttonAnimation: LottieAnimationView!
-
+    @IBOutlet weak var successLottie: LottieAnimationView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupSubviews()
     }
     
     private func setupSubviews() {
+        addImageInTF(userNameTF, name: "username")
         addImageInTF(emailTF, name: "email")
         addImageInTF(passwordTF, name: "password")
         
@@ -39,38 +42,38 @@ class SignInViewController: UIViewController {
         textField.delegate = self
     }
     
-    @IBAction func loginClick(_ sender: UIButton) {
+    @IBAction func registrationClick(_ sender: UIButton) {
         self.view.endEditing(true)
-        guard (emailTF.text != nil), passwordTF.text != nil else {
+        guard (userNameTF.text != nil), (emailTF.text != nil), passwordTF.text != nil else {
             print("Fields are empty")
-            showAlert(title: "Something was wrong!", message: "Fields are empty")
             return
         }
         
-        AuthService.service.login(email: emailTF.text, password: passwordTF.text) { result in
+        AuthService.service.registration(email: emailTF.text, password: passwordTF.text) { result in
             switch result {
                 
             case .success(let user):
-                print("Success")
-                let viewController = TabBarController()
-                viewController.modalPresentationStyle = .overFullScreen
-                self.present(viewController, animated: true)
+                print(user.email!)
+                AuthService.service.confirmEmail()
+                self.successLottie.startLottieAnimation("successLottie", speed: 1, loopMode: .playOnce, contentMode: .scaleToFill)
             case .failure(let error):
-                print("Login Error")
+                print(error.localizedDescription)
                 self.showAlert(title: "Something was wrong!", message: error.localizedDescription)
             }
         }
     }
     
-    @IBAction func openRegisterScreen(_ sender: UIButton) {
-        dismiss(animated: true)
+    @IBAction func openLoginScreen(_ sender: UIButton) {
+        let viewController = SignInViewController(nibName: "SignInViewController", bundle: nil)
+        viewController.modalPresentationStyle = .overFullScreen
+        present(viewController, animated: true)
     }
     
 }
 
 //MARK: TextField Delegate
 
-extension SignInViewController: UITextFieldDelegate {
+extension SignUpViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false

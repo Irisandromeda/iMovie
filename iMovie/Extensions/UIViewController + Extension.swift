@@ -2,18 +2,18 @@
 //  UIViewController + Extension.swift
 //  iMovie
 //
-//  Created by Irisandromeda on 10.06.2023.
+//  Created by Irisandromeda on 11.06.2023.
 //
 
 import UIKit
-import Lottie
 
-extension LottieAnimationView {
-    func startLottieAnimation(_ name: String, speed: CGFloat, loopMode: LottieLoopMode, contentMode: ContentMode) {
-        self.animation = LottieAnimation.named(name)
-        self.animationSpeed = speed
-        self.loopMode = loopMode
-        self.contentMode = contentMode
-        self.play()
+extension UIViewController {
+    
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Okey", style: .default)
+        alert.addAction(alertAction)
+        present(alert, animated: true)
     }
+    
 }

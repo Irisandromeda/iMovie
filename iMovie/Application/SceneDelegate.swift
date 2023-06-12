@@ -17,7 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow()
         window?.windowScene = windowScene
-        window?.rootViewController = LoadingViewController()
+        let viewController = LoadingViewController(nibName: "LoadingViewController", bundle: nil)
+        window?.rootViewController = TabBarController()
         window?.makeKeyAndVisible()
     }
 

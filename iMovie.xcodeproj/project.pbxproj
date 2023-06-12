@@ -14,9 +14,9 @@
 		4F6797912A33E268007E4EA9 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67978F2A33E268007E4EA9 /* LoadingViewController.swift */; };
 		4F6797922A33E268007E4EA9 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F6797902A33E268007E4EA9 /* LoadingViewController.xib */; };
 		4F6797A12A33E607007E4EA9 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4F6797A02A33E607007E4EA9 /* Lottie */; };
-		4F6797A42A33EBB6007E4EA9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6797A22A33EBB6007E4EA9 /* SignInViewController.swift */; };
-		4F6797A52A33EBB6007E4EA9 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F6797A32A33EBB6007E4EA9 /* SignInViewController.xib */; };
-		4F6797AC2A33F5D6007E4EA9 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6797AB2A33F5D6007E4EA9 /* UIViewController + Extension.swift */; };
+		4F6797A42A33EBB6007E4EA9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6797A22A33EBB6007E4EA9 /* SignUpViewController.swift */; };
+		4F6797A52A33EBB6007E4EA9 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F6797A32A33EBB6007E4EA9 /* SignUpViewController.xib */; };
+		4F6797AC2A33F5D6007E4EA9 /* LottieAnimationView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6797AB2A33F5D6007E4EA9 /* LottieAnimationView + Extension.swift */; };
 		4F8191E42A349BC200719B54 /* darkLoadingLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F8191E22A349BC200719B54 /* darkLoadingLottie.json */; };
 		4F8191E52A349BC200719B54 /* lightLoadingLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F8191E32A349BC200719B54 /* lightLoadingLottie.json */; };
 		4F8192242A35546D00719B54 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F81921F2A35533600719B54 /* Poppins-ExtraBoldItalic.ttf */; };
@@ -37,9 +37,25 @@
 		4F8192332A35546D00719B54 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F8192172A35533600719B54 /* Poppins-ExtraLightItalic.ttf */; };
 		4F8192342A35546D00719B54 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F8192212A35533600719B54 /* Poppins-Light.ttf */; };
 		4F8192362A35594800719B54 /* buttonLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F8192352A35594800719B54 /* buttonLottie.json */; };
+		4FA3EAF02A36242200498942 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA3EAEF2A36242200498942 /* UIViewController + Extension.swift */; };
+		4FA3EB022A368B3300498942 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA3EB002A368B3300498942 /* SearchViewController.swift */; };
+		4FA3EB032A368B3300498942 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FA3EB012A368B3300498942 /* SearchViewController.xib */; };
+		4FA3EB062A368B6800498942 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA3EB042A368B6800498942 /* FavoritesViewController.swift */; };
+		4FA3EB072A368B6800498942 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FA3EB052A368B6800498942 /* FavoritesViewController.xib */; };
+		4FA3EB0A2A368B7600498942 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA3EB082A368B7600498942 /* ProfileViewController.swift */; };
+		4FA3EB0B2A368B7600498942 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FA3EB092A368B7600498942 /* ProfileViewController.xib */; };
+		4FA3EB102A36941000498942 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA3EB0F2A36941000498942 /* TabBarController.swift */; };
+		4FF103262A35DEAE0070332D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FF103252A35DEAE0070332D /* GoogleService-Info.plist */; };
+		4FF1032A2A35ED090070332D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF103292A35ED090070332D /* AuthService.swift */; };
+		4FF1033E2A3606FB0070332D /* successLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FF1033D2A3606FB0070332D /* successLottie.json */; };
+		4FF103412A360E790070332D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF1033F2A360E790070332D /* SignInViewController.swift */; };
+		4FF103452A360EE10070332D /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF103442A360EE10070332D /* SignInViewController.xib */; };
+		E1A0881DC34BD7A85EECD4F1 /* Pods_iMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C411F3F1E801021D118CE52 /* Pods_iMovie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		138F2ACC43297F7C7EE1E995 /* Pods-iMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMovie.release.xcconfig"; path = "Target Support Files/Pods-iMovie/Pods-iMovie.release.xcconfig"; sourceTree = "<group>"; };
+		4C411F3F1E801021D118CE52 /* Pods_iMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F6797772A33E20D007E4EA9 /* iMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F67977A2A33E20D007E4EA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F67977C2A33E20D007E4EA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,9 +64,9 @@
 		4F6797882A33E20E007E4EA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F67978F2A33E268007E4EA9 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		4F6797902A33E268007E4EA9 /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
-		4F6797A22A33EBB6007E4EA9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		4F6797A32A33EBB6007E4EA9 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
-		4F6797AB2A33F5D6007E4EA9 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		4F6797A22A33EBB6007E4EA9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4F6797A32A33EBB6007E4EA9 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		4F6797AB2A33F5D6007E4EA9 /* LottieAnimationView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LottieAnimationView + Extension.swift"; sourceTree = "<group>"; };
 		4F8191E22A349BC200719B54 /* darkLoadingLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = darkLoadingLottie.json; sourceTree = "<group>"; };
 		4F8191E32A349BC200719B54 /* lightLoadingLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lightLoadingLottie.json; sourceTree = "<group>"; };
 		4F8192112A35533500719B54 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -71,6 +87,20 @@
 		4F8192212A35533600719B54 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
 		4F8192222A35533600719B54 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
 		4F8192352A35594800719B54 /* buttonLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = buttonLottie.json; sourceTree = "<group>"; };
+		4FA3EAEF2A36242200498942 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		4FA3EB002A368B3300498942 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4FA3EB012A368B3300498942 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		4FA3EB042A368B6800498942 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		4FA3EB052A368B6800498942 /* FavoritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
+		4FA3EB082A368B7600498942 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4FA3EB092A368B7600498942 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		4FA3EB0F2A36941000498942 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		4FF103252A35DEAE0070332D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4FF103292A35ED090070332D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		4FF1033D2A3606FB0070332D /* successLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = successLottie.json; sourceTree = "<group>"; };
+		4FF1033F2A360E790070332D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		4FF103442A360EE10070332D /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		73EF6641920146A8AA5F9AAB /* Pods-iMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMovie.debug.xcconfig"; path = "Target Support Files/Pods-iMovie/Pods-iMovie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,17 +109,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F6797A12A33E607007E4EA9 /* Lottie in Frameworks */,
+				E1A0881DC34BD7A85EECD4F1 /* Pods_iMovie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31E5D161417AAE4C3D9E1450 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C411F3F1E801021D118CE52 /* Pods_iMovie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4F67976E2A33E20D007E4EA9 = {
 			isa = PBXGroup;
 			children = (
 				4F6797792A33E20D007E4EA9 /* iMovie */,
 				4F6797782A33E20D007E4EA9 /* Products */,
+				FC531234056BF7B132E528D0 /* Pods */,
+				31E5D161417AAE4C3D9E1450 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +145,7 @@
 		4F6797792A33E20D007E4EA9 /* iMovie */ = {
 			isa = PBXGroup;
 			children = (
+				4FF103272A35DEB20070332D /* Firebase */,
 				4F67978E2A33E234007E4EA9 /* Application */,
 				4F6797942A33E282007E4EA9 /* Controllers */,
 				4F6797952A33E28F007E4EA9 /* Resources */,
@@ -136,7 +178,9 @@
 			isa = PBXGroup;
 			children = (
 				4F6797932A33E274007E4EA9 /* Loading */,
-				4F6797A62A33EBC6007E4EA9 /* SignIn */,
+				4F6797A62A33EBC6007E4EA9 /* SignUp */,
+				4FF103432A360E7D0070332D /* SignIn */,
+				4FA3EAF72A36823E00498942 /* TabBar */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -154,6 +198,7 @@
 		4F67979B2A33E47A007E4EA9 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				4FF1033D2A3606FB0070332D /* successLottie.json */,
 				4F8191E22A349BC200719B54 /* darkLoadingLottie.json */,
 				4F8191E32A349BC200719B54 /* lightLoadingLottie.json */,
 				4F8192352A35594800719B54 /* buttonLottie.json */,
@@ -161,19 +206,20 @@
 			path = Lottie;
 			sourceTree = "<group>";
 		};
-		4F6797A62A33EBC6007E4EA9 /* SignIn */ = {
+		4F6797A62A33EBC6007E4EA9 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				4F6797A22A33EBB6007E4EA9 /* SignInViewController.swift */,
-				4F6797A32A33EBB6007E4EA9 /* SignInViewController.xib */,
+				4F6797A22A33EBB6007E4EA9 /* SignUpViewController.swift */,
+				4F6797A32A33EBB6007E4EA9 /* SignUpViewController.xib */,
 			);
-			path = SignIn;
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		4F6797AD2A33F6BB007E4EA9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4F6797AB2A33F5D6007E4EA9 /* UIViewController + Extension.swift */,
+				4F6797AB2A33F5D6007E4EA9 /* LottieAnimationView + Extension.swift */,
+				4FA3EAEF2A36242200498942 /* UIViewController + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -210,6 +256,71 @@
 			path = Poppins;
 			sourceTree = "<group>";
 		};
+		4FA3EAF72A36823E00498942 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				4FA3EB0F2A36941000498942 /* TabBarController.swift */,
+				4FA3EB0C2A368B7A00498942 /* Search */,
+				4FA3EB0D2A368B8500498942 /* Favorites */,
+				4FA3EB0E2A368B8C00498942 /* Profile */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		4FA3EB0C2A368B7A00498942 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				4FA3EB002A368B3300498942 /* SearchViewController.swift */,
+				4FA3EB012A368B3300498942 /* SearchViewController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		4FA3EB0D2A368B8500498942 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				4FA3EB042A368B6800498942 /* FavoritesViewController.swift */,
+				4FA3EB052A368B6800498942 /* FavoritesViewController.xib */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		4FA3EB0E2A368B8C00498942 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4FA3EB082A368B7600498942 /* ProfileViewController.swift */,
+				4FA3EB092A368B7600498942 /* ProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		4FF103272A35DEB20070332D /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				4FF103292A35ED090070332D /* AuthService.swift */,
+				4FF103252A35DEAE0070332D /* GoogleService-Info.plist */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		4FF103432A360E7D0070332D /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				4FF1033F2A360E790070332D /* SignInViewController.swift */,
+				4FF103442A360EE10070332D /* SignInViewController.xib */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		FC531234056BF7B132E528D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73EF6641920146A8AA5F9AAB /* Pods-iMovie.debug.xcconfig */,
+				138F2ACC43297F7C7EE1E995 /* Pods-iMovie.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -217,9 +328,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F67978B2A33E20E007E4EA9 /* Build configuration list for PBXNativeTarget "iMovie" */;
 			buildPhases = (
+				6D77408151CB54475704ACD9 /* [CP] Check Pods Manifest.lock */,
 				4F6797732A33E20D007E4EA9 /* Sources */,
 				4F6797742A33E20D007E4EA9 /* Frameworks */,
 				4F6797752A33E20D007E4EA9 /* Resources */,
+				4F7ECE2A7F6FB9FB54D9AB73 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -276,19 +389,25 @@
 			files = (
 				4F8192242A35546D00719B54 /* Poppins-ExtraBoldItalic.ttf in Resources */,
 				4F8191E42A349BC200719B54 /* darkLoadingLottie.json in Resources */,
+				4FF103262A35DEAE0070332D /* GoogleService-Info.plist in Resources */,
 				4F8192292A35546D00719B54 /* Poppins-Regular.ttf in Resources */,
 				4F81922B2A35546D00719B54 /* Poppins-Italic.ttf in Resources */,
-				4F6797A52A33EBB6007E4EA9 /* SignInViewController.xib in Resources */,
+				4F6797A52A33EBB6007E4EA9 /* SignUpViewController.xib in Resources */,
+				4FA3EB032A368B3300498942 /* SearchViewController.xib in Resources */,
 				4F81922F2A35546D00719B54 /* Poppins-SemiBold.ttf in Resources */,
+				4FF103452A360EE10070332D /* SignInViewController.xib in Resources */,
 				4F8192312A35546D00719B54 /* Poppins-ExtraLight.ttf in Resources */,
 				4F81922C2A35546D00719B54 /* Poppins-Medium.ttf in Resources */,
+				4FA3EB072A368B6800498942 /* FavoritesViewController.xib in Resources */,
 				4F8192322A35546D00719B54 /* Poppins-Black.ttf in Resources */,
 				4F8191E52A349BC200719B54 /* lightLoadingLottie.json in Resources */,
 				4F81922A2A35546D00719B54 /* Poppins-MediumItalic.ttf in Resources */,
 				4F6797872A33E20E007E4EA9 /* LaunchScreen.storyboard in Resources */,
 				4F8192362A35594800719B54 /* buttonLottie.json in Resources */,
 				4F8192262A35546D00719B54 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				4FA3EB0B2A368B7600498942 /* ProfileViewController.xib in Resources */,
 				4F6797842A33E20E007E4EA9 /* Assets.xcassets in Resources */,
+				4FF1033E2A3606FB0070332D /* successLottie.json in Resources */,
 				4F8192282A35546D00719B54 /* Poppins-LightItalic.ttf in Resources */,
 				4F8192252A35546D00719B54 /* Poppins-BlackItalic.ttf in Resources */,
 				4F8192332A35546D00719B54 /* Poppins-ExtraLightItalic.ttf in Resources */,
@@ -303,14 +422,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4F7ECE2A7F6FB9FB54D9AB73 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iMovie/Pods-iMovie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iMovie/Pods-iMovie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iMovie/Pods-iMovie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D77408151CB54475704ACD9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iMovie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4F6797732A33E20D007E4EA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F6797A42A33EBB6007E4EA9 /* SignInViewController.swift in Sources */,
-				4F6797AC2A33F5D6007E4EA9 /* UIViewController + Extension.swift in Sources */,
+				4FA3EB022A368B3300498942 /* SearchViewController.swift in Sources */,
+				4FF103412A360E790070332D /* SignInViewController.swift in Sources */,
+				4F6797A42A33EBB6007E4EA9 /* SignUpViewController.swift in Sources */,
+				4FA3EAF02A36242200498942 /* UIViewController + Extension.swift in Sources */,
+				4F6797AC2A33F5D6007E4EA9 /* LottieAnimationView + Extension.swift in Sources */,
+				4FA3EB0A2A368B7600498942 /* ProfileViewController.swift in Sources */,
+				4FA3EB062A368B6800498942 /* FavoritesViewController.swift in Sources */,
 				4F67977B2A33E20D007E4EA9 /* AppDelegate.swift in Sources */,
+				4FF1032A2A35ED090070332D /* AuthService.swift in Sources */,
+				4FA3EB102A36941000498942 /* TabBarController.swift in Sources */,
 				4F67977D2A33E20D007E4EA9 /* SceneDelegate.swift in Sources */,
 				4F6797912A33E268007E4EA9 /* LoadingViewController.swift in Sources */,
 			);
@@ -446,6 +614,7 @@
 		};
 		4F67978C2A33E20E007E4EA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73EF6641920146A8AA5F9AAB /* Pods-iMovie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -480,6 +649,7 @@
 		};
 		4F67978D2A33E20E007E4EA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 138F2ACC43297F7C7EE1E995 /* Pods-iMovie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
