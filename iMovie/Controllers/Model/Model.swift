@@ -5,11 +5,11 @@
 //  Created by Irisandromeda on 13.06.2023.
 //
 
-import Foundation
+import UIKit
 
 protocol ModelProtocol {
     var movies: [Movie] { get set}
-    func fetchMovies(movieName: String)
+    var collectionView: UICollectionView? { get set }
 }
 
 class Model: ModelProtocol {
@@ -18,7 +18,9 @@ class Model: ModelProtocol {
     
     var movies: [Movie] = []
     
-    func fetchMovies(movieName: String) {
+    var collectionView: UICollectionView?
+    
+    func fetchMovies(movieName: String, collectionView: UICollectionView) {
         
         let urlString = "https://itunes.apple.com/search?term=\(movieName)&country=us&entity=movie&limit=15"
         
@@ -29,7 +31,10 @@ class Model: ModelProtocol {
                 guard let movieModel = movieModel else { return }
                 
                 self.movies = movieModel.results
+                collectionView.reloadData()
+                self.collectionView = collectionView
                 print(movieModel.results)
+                print(self.movies.count)
             } else {
                 print(error!.localizedDescription)
             }

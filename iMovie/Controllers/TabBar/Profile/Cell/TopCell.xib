@@ -83,6 +83,9 @@
             <point key="canvasLocation" x="283.20610687022901" y="105.28169014084507"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="W63-NC-2e4"/>
+    </designables>
     <resources>
         <image name="person.crop.circle.fill.badge.checkmark" catalog="system" width="128" height="114"/>
         <namedColor name="defaultWhite">

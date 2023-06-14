@@ -29,7 +29,15 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKb-f5-3kQ">
                         <rect key="frame" x="0.0" y="0.0" width="236" height="270"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Interstellar-Film" translatesAutoresizingMaskIntoConstraints="NO" id="YIN-hW-D0o">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchBackground" translatesAutoresizingMaskIntoConstraints="NO" id="YIN-hW-D0o">
+                                <rect key="frame" x="0.0" y="0.0" width="236" height="270"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Ni-X6-UnO">
                                 <rect key="frame" x="0.0" y="0.0" width="236" height="270"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -83,10 +91,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YIN-hW-D0o" firstAttribute="top" secondItem="hKb-f5-3kQ" secondAttribute="top" id="8FA-pn-kbD"/>
+                            <constraint firstItem="1Ni-X6-UnO" firstAttribute="top" secondItem="hKb-f5-3kQ" secondAttribute="top" id="8n0-C2-NoK"/>
                             <constraint firstAttribute="trailing" secondItem="YIN-hW-D0o" secondAttribute="trailing" id="9JW-ZE-Uo2"/>
+                            <constraint firstItem="1Ni-X6-UnO" firstAttribute="leading" secondItem="hKb-f5-3kQ" secondAttribute="leading" id="BSO-ya-WfM"/>
                             <constraint firstItem="YIN-hW-D0o" firstAttribute="leading" secondItem="hKb-f5-3kQ" secondAttribute="leading" id="BzE-Py-zKY"/>
                             <constraint firstItem="CL4-VH-FFs" firstAttribute="leading" secondItem="hKb-f5-3kQ" secondAttribute="leading" id="KfX-2r-kMD"/>
                             <constraint firstAttribute="bottom" secondItem="CL4-VH-FFs" secondAttribute="bottom" id="Khg-gM-CT9"/>
+                            <constraint firstAttribute="bottom" secondItem="1Ni-X6-UnO" secondAttribute="bottom" id="X0N-bz-kXD"/>
+                            <constraint firstAttribute="trailing" secondItem="1Ni-X6-UnO" secondAttribute="trailing" id="bbu-t4-uxZ"/>
                             <constraint firstAttribute="bottom" secondItem="YIN-hW-D0o" secondAttribute="bottom" id="caj-dM-Pev"/>
                             <constraint firstAttribute="trailing" secondItem="CL4-VH-FFs" secondAttribute="trailing" id="gRn-R1-Poa"/>
                         </constraints>
@@ -101,11 +113,16 @@
                 <constraint firstItem="hKb-f5-3kQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xK1-Hg-Ib1"/>
             </constraints>
             <size key="customSize" width="236" height="270"/>
+            <connections>
+                <outlet property="movieGenre" destination="Ll7-10-G8K" id="jaZ-aB-B2c"/>
+                <outlet property="movieImage" destination="1Ni-X6-UnO" id="JqG-Fw-DCr"/>
+                <outlet property="movieName" destination="PXU-aF-W6z" id="5az-3W-PlN"/>
+            </connections>
             <point key="canvasLocation" x="190.83969465648855" y="97.183098591549296"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Interstellar-Film" width="1699" height="2654"/>
+        <image name="searchBackground" width="6016" height="4016"/>
         <namedColor name="labelColor">
             <color red="0.097999997437000275" green="0.10999999940395355" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

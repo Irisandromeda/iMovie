@@ -13,7 +13,10 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchTF: UITextField!
     @IBOutlet weak var searchCollectionView: UICollectionView!
     
+    private let model = Model.shared
+    
     private let searchMovieCellId = "searchMovieCellId"
+    private let searchHeaderCellId = "searchHeaderCellId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,15 +50,19 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 10
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return model.movies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: searchMovieCellId, for: indexPath) as? SearchMovieCell else { return UICollectionViewCell() }
+        
+        if !model.movies.isEmpty {
+            cell.configureCell(movies: model.movies[indexPath.row])
+        }
         
         return cell
     }
@@ -64,7 +71,10 @@ extension SearchViewController: UICollectionViewDataSource {
 //MARK: Collection View Delegate
 
 extension SearchViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let viewController = MovieViewController(movie: model.movies[indexPath.item])
+        present(viewController, animated: true)
+    }
 }
 
 //MARK: Collection View Delegate Flow Layout
@@ -89,7 +99,7 @@ extension SearchViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         guard let text = textField.text else { return false }
-        Model.shared.fetchMovies(movieName: text)
+        model.fetchMovies(movieName: text, collectionView: searchCollectionView)
         return false
     }
 }
