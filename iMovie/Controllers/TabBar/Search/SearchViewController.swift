@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SearchViewController: UIViewController {
     
@@ -17,6 +18,17 @@ class SearchViewController: UIViewController {
     
     private let searchMovieCellId = "searchMovieCellId"
     private let searchHeaderCellId = "searchHeaderCellId"
+    
+    private var currentUser: User
+    
+    init(user: User) {
+        self.currentUser = user
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +84,7 @@ extension SearchViewController: UICollectionViewDataSource {
 
 extension SearchViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let viewController = MovieViewController(movie: model.movies[indexPath.item])
+        let viewController = MovieViewController(user: currentUser, movie: model.movies[indexPath.item])
         present(viewController, animated: true)
     }
 }

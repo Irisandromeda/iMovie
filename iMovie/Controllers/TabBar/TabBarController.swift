@@ -6,13 +6,27 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class TabBarController: UITabBarController {
+    
+    private var currentUser: User
+    
+    init(user: User) {
+        self.currentUser = user
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTabBar()
+        print(currentUser.uid)
+        print(currentUser.email!)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -22,7 +36,7 @@ class TabBarController: UITabBarController {
     }
     
     private func setupTabBar() {
-        let searchViewController = SearchViewController(nibName: "SearchViewController", bundle: nil)
+        let searchViewController = SearchViewController(user: currentUser)
         let favoritesViewController = FavoritesViewController(nibName: "FavoritesViewController", bundle: nil)
         let profileViewController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
         

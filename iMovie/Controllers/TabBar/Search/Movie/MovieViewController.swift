@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import FirebaseAuth
 
 class MovieViewController: UIViewController {
     
@@ -17,9 +18,11 @@ class MovieViewController: UIViewController {
     @IBOutlet weak var movieDescription: UITextView!
     @IBOutlet weak var movieImage: UIImageView!
     
+    private var currentUser: User
     private var movie: Movie
     
-    init(movie: Movie) {
+    init(user: User, movie: Movie) {
+        self.currentUser = user
         self.movie = movie
         super.init(nibName: nil, bundle: nil)
     }
@@ -45,4 +48,21 @@ class MovieViewController: UIViewController {
         }
     }
 
+    @IBAction func saveMovieAction(_ sender: UIButton) {
+        FireStoreService.shared.saveFavoriteMovie(userId: currentUser.uid.description, movie: movie) { result in
+            switch result {
+                
+            case .success(_):
+                print("Success")
+            case .failure(let error):
+                self.showAlert(title: "Something was wrong!", message: error.localizedDescription)
+            }
+        }
+    }
+    
+    
+    @IBAction func shareMovieAction(_ sender: UIButton) {
+        
+    }
+    
 }

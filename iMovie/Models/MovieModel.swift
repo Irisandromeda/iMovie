@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 struct MovieModel: Decodable {
     let results: [Movie]
@@ -17,4 +18,15 @@ struct Movie: Decodable {
     let releaseDate: String
     let longDescription: String
     let artworkUrl100: String?
+    
+    var dictionary: [String: Any] {
+        var key = ["movieName": trackName]
+        key["movieGenre"] = primaryGenreName
+        key["date"] = releaseDate
+        key["movieDescription"] = longDescription
+        key["image"] = artworkUrl100
+        
+        return key
+    }
 }
+

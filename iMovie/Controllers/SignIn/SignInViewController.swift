@@ -52,7 +52,7 @@ class SignInViewController: UIViewController {
                 
             case .success(let user):
                 print("Success")
-                let viewController = TabBarController()
+                let viewController = TabBarController(user: user)
                 viewController.modalPresentationStyle = .overFullScreen
                 self.present(viewController, animated: true)
             case .failure(let error):

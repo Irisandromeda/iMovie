@@ -57,6 +57,7 @@
 		4FB3AE152A39D6E30011C913 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FB3AE142A39D6E30011C913 /* Assets.xcassets */; };
 		4FB3AE2B2A3A09DB0011C913 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3AE292A3A09DB0011C913 /* MovieViewController.swift */; };
 		4FB3AE2C2A3A09DB0011C913 /* MovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB3AE2A2A3A09DB0011C913 /* MovieViewController.xib */; };
+		4FB80E5A2A3B4B3C008FA6CE /* FireStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB80E592A3B4B3C008FA6CE /* FireStoreService.swift */; };
 		4FF103262A35DEAE0070332D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FF103252A35DEAE0070332D /* GoogleService-Info.plist */; };
 		4FF1032A2A35ED090070332D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF103292A35ED090070332D /* AuthService.swift */; };
 		4FF1033E2A3606FB0070332D /* successLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FF1033D2A3606FB0070332D /* successLottie.json */; };
@@ -118,6 +119,7 @@
 		4FB3AE142A39D6E30011C913 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FB3AE292A3A09DB0011C913 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		4FB3AE2A2A3A09DB0011C913 /* MovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewController.xib; sourceTree = "<group>"; };
+		4FB80E592A3B4B3C008FA6CE /* FireStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreService.swift; sourceTree = "<group>"; };
 		4FF103252A35DEAE0070332D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4FF103292A35ED090070332D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		4FF1033D2A3606FB0070332D /* successLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = successLottie.json; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				4FF103292A35ED090070332D /* AuthService.swift */,
+				4FB80E592A3B4B3C008FA6CE /* FireStoreService.swift */,
 				4FF103252A35DEAE0070332D /* GoogleService-Info.plist */,
 			);
 			path = Firebase;
@@ -571,6 +574,7 @@
 				4F073A1A2A37C0CE00559A5C /* Model.swift in Sources */,
 				4F073A152A37819400559A5C /* NetworkRequest.swift in Sources */,
 				4FF1032A2A35ED090070332D /* AuthService.swift in Sources */,
+				4FB80E5A2A3B4B3C008FA6CE /* FireStoreService.swift in Sources */,
 				4FB3AE2B2A3A09DB0011C913 /* MovieViewController.swift in Sources */,
 				4FA3EB102A36941000498942 /* TabBarController.swift in Sources */,
 				4F073A1E2A37E2F900559A5C /* SearchMovieCell.swift in Sources */,
