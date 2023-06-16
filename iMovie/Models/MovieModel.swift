@@ -8,11 +8,11 @@
 import Foundation
 import FirebaseFirestore
 
-struct MovieModel: Decodable {
+struct MovieModel: Hashable, Decodable {
     let results: [Movie]
 }
 
-struct Movie: Decodable {
+struct Movie: Decodable, Hashable {
     let trackName: String
     let primaryGenreName: String
     let releaseDate: String

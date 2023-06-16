@@ -31,6 +31,7 @@
 		4F75D4C62A3C94460032F9D6 /* UITableView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D4C52A3C94460032F9D6 /* UITableView + Extension.swift */; };
 		4F75D4C92A3CA58F0032F9D6 /* FavoriteMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D4C72A3CA58F0032F9D6 /* FavoriteMovieCell.swift */; };
 		4F75D4CA2A3CA58F0032F9D6 /* FavoriteMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F75D4C82A3CA58F0032F9D6 /* FavoriteMovieCell.xib */; };
+		4F75D4CD2A3CD2020032F9D6 /* ListenerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D4CC2A3CD2020032F9D6 /* ListenerService.swift */; };
 		4F8191E42A349BC200719B54 /* darkLoadingLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F8191E22A349BC200719B54 /* darkLoadingLottie.json */; };
 		4F8191E52A349BC200719B54 /* lightLoadingLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F8191E32A349BC200719B54 /* lightLoadingLottie.json */; };
 		4F8192242A35546D00719B54 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F81921F2A35533600719B54 /* Poppins-ExtraBoldItalic.ttf */; };
@@ -100,6 +101,7 @@
 		4F75D4C52A3C94460032F9D6 /* UITableView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView + Extension.swift"; sourceTree = "<group>"; };
 		4F75D4C72A3CA58F0032F9D6 /* FavoriteMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMovieCell.swift; sourceTree = "<group>"; };
 		4F75D4C82A3CA58F0032F9D6 /* FavoriteMovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteMovieCell.xib; sourceTree = "<group>"; };
+		4F75D4CC2A3CD2020032F9D6 /* ListenerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerService.swift; sourceTree = "<group>"; };
 		4F8191E22A349BC200719B54 /* darkLoadingLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = darkLoadingLottie.json; sourceTree = "<group>"; };
 		4F8191E32A349BC200719B54 /* lightLoadingLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lightLoadingLottie.json; sourceTree = "<group>"; };
 		4F8192112A35533500719B54 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -410,6 +412,7 @@
 			children = (
 				4FF103292A35ED090070332D /* AuthService.swift */,
 				4FB80E592A3B4B3C008FA6CE /* FireStoreService.swift */,
+				4F75D4CC2A3CD2020032F9D6 /* ListenerService.swift */,
 				4FF103252A35DEAE0070332D /* GoogleService-Info.plist */,
 			);
 			path = Firebase;
@@ -593,6 +596,7 @@
 				4F073A112A377F0F00559A5C /* MovieModel.swift in Sources */,
 				4F75D4B82A3C5F5D0032F9D6 /* UserModel.swift in Sources */,
 				4FA3EB022A368B3300498942 /* SearchViewController.swift in Sources */,
+				4F75D4CD2A3CD2020032F9D6 /* ListenerService.swift in Sources */,
 				4FF103412A360E790070332D /* SignInViewController.swift in Sources */,
 				4F6797A42A33EBB6007E4EA9 /* SignUpViewController.swift in Sources */,
 				4FA3EAF02A36242200498942 /* UIViewController + Extension.swift in Sources */,

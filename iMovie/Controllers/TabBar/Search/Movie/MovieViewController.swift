@@ -62,7 +62,17 @@ class MovieViewController: UIViewController {
     
     
     @IBAction func shareMovieAction(_ sender: UIButton) {
+        guard let movieLink = movie.collectionViewUrl else { return }
+        share(movieLink: movieLink)
+    }
+    
+    private func share(movieLink: String) {
+        var items: [String] = []
+        items.append(movieLink)
         
+        let activityViewController = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        
+        present(activityViewController, animated: true, completion: nil)
     }
     
 }

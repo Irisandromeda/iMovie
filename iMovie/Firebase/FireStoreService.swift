@@ -9,6 +9,8 @@ import Firebase
 import FirebaseCore
 import FirebaseFirestore
 
+//MARK: Firebase Firestore Service
+
 class FireStoreService {
     
     static let shared = FireStoreService()
@@ -84,4 +86,15 @@ class FireStoreService {
         }
     }
     
+//MARK: Delete Data
+    
+    func deleteMovie(movie: Movie, completion: @escaping (Result<Void, Error>) -> Void) {
+        userReference.document(currentUser.userID).collection("favoriteMovies").document(movie.trackName).delete { error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            completion(.success(Void()))
+        }
+    }
 }

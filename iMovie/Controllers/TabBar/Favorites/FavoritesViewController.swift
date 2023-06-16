@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import FirebaseFirestore
 
 class FavoritesViewController: UIViewController {
     
@@ -15,7 +16,13 @@ class FavoritesViewController: UIViewController {
     
     private let favoriteMovieId = "FavoriteMovieCell"
     
+    private var moviesListener: ListenerRegistration?
+    
     private var movies: [Movie] = []
+    
+    deinit {
+        moviesListener?.remove()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +30,7 @@ class FavoritesViewController: UIViewController {
         setupNavigationBar()
         setupTableView()
         
-        FireStoreService.shared.getFavoriteMovies { result in
+        moviesListener = ListenerService.shared.moviesListener(movies: movies) { result in
             switch result {
                 
             case .success(let movies):
@@ -73,5 +80,27 @@ extension FavoritesViewController: UITableViewDataSource {
 extension FavoritesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 65
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Выполнение действий для удаления ячейки
+            
+            // Удаление объекта из источника данных
+            FireStoreService.shared.deleteMovie(movie: movies[indexPath.item]) { result in
+                switch result {
+
+                case .success(_):
+                    print("Movie - removed")
+                case .failure(let error):
+                    self.showAlert(title: "Something was wrong!", message: error.localizedDescription)
+                }
+            }
+            self.movies.remove(at: indexPath.item)
+            
+            // Удаление ячейки из таблицы
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        tableView.reloadData()
     }
 }
