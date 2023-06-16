@@ -37,7 +37,7 @@ class TabBarController: UITabBarController {
     
     private func setupTabBar() {
         let searchViewController = SearchViewController(user: currentUser)
-        let favoritesViewController = FavoritesViewController(nibName: "FavoritesViewController", bundle: nil)
+        let favoritesViewController = FavoritesViewController(user: currentUser)
         let profileViewController = ProfileViewController(user: currentUser)
         
         viewControllers = [

@@ -20,6 +20,17 @@ class FavoritesViewController: UIViewController {
     
     private var movies: [Movie] = []
     
+    private var currentUser: UserModel
+    
+    init(user: UserModel) {
+        self.currentUser = user
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     deinit {
         moviesListener?.remove()
     }
@@ -102,5 +113,10 @@ extension FavoritesViewController: UITableViewDelegate {
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
         tableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = MovieViewController(user: currentUser, movie: movies[indexPath.item])
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
