@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoritesViewController" customModule="iMovie" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="DP2-rR-tRH" id="We3-MZ-idY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,8 +19,25 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DP2-rR-tRH">
+                    <rect key="frame" x="0.0" y="59" width="393" height="693"/>
+                    <color key="backgroundColor" name="customWhite"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="customWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="DP2-rR-tRH" secondAttribute="bottom" constant="100" id="1E1-ey-mhY"/>
+                <constraint firstItem="DP2-rR-tRH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cgO-jV-qDc"/>
+                <constraint firstItem="DP2-rR-tRH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="iI9-2q-wyh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DP2-rR-tRH" secondAttribute="trailing" id="oAP-ip-nQq"/>
+            </constraints>
             <point key="canvasLocation" x="140" y="20"/>
         </view>
     </objects>

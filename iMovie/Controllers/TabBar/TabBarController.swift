@@ -10,9 +10,9 @@ import FirebaseAuth
 
 class TabBarController: UITabBarController {
     
-    private var currentUser: User
+    private var currentUser: UserModel
     
-    init(user: User) {
+    init(user: UserModel) {
         self.currentUser = user
         super.init(nibName: nil, bundle: nil)
     }
@@ -25,8 +25,8 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         
         setupTabBar()
-        print(currentUser.uid)
-        print(currentUser.email!)
+        print(currentUser.userID)
+        print(currentUser.email)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,7 +38,7 @@ class TabBarController: UITabBarController {
     private func setupTabBar() {
         let searchViewController = SearchViewController(user: currentUser)
         let favoritesViewController = FavoritesViewController(nibName: "FavoritesViewController", bundle: nil)
-        let profileViewController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+        let profileViewController = ProfileViewController(user: currentUser)
         
         viewControllers = [
             setupViewController(UINavigationController(rootViewController: searchViewController), title: "Search", image: UIImage(named: "search")!),
@@ -47,6 +47,8 @@ class TabBarController: UITabBarController {
         ]
         
         tabBar.tintColor = UIColor(named: "defaultWhite")
+        tabBar.backgroundColor = UIColor(named: "customWhite")
+        
     }
     
     private func setupViewController(_ viewController: UINavigationController, title: String, image: UIImage) -> UIViewController {

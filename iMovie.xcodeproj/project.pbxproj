@@ -25,6 +25,12 @@
 		4F6797A42A33EBB6007E4EA9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6797A22A33EBB6007E4EA9 /* SignUpViewController.swift */; };
 		4F6797A52A33EBB6007E4EA9 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F6797A32A33EBB6007E4EA9 /* SignUpViewController.xib */; };
 		4F6797AC2A33F5D6007E4EA9 /* LottieAnimationView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6797AB2A33F5D6007E4EA9 /* LottieAnimationView + Extension.swift */; };
+		4F75D4B82A3C5F5D0032F9D6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D4B72A3C5F5D0032F9D6 /* UserModel.swift */; };
+		4F75D4C32A3C8C580032F9D6 /* BottomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D4C12A3C8C580032F9D6 /* BottomCell.swift */; };
+		4F75D4C42A3C8C580032F9D6 /* BottomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F75D4C22A3C8C580032F9D6 /* BottomCell.xib */; };
+		4F75D4C62A3C94460032F9D6 /* UITableView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D4C52A3C94460032F9D6 /* UITableView + Extension.swift */; };
+		4F75D4C92A3CA58F0032F9D6 /* FavoriteMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D4C72A3CA58F0032F9D6 /* FavoriteMovieCell.swift */; };
+		4F75D4CA2A3CA58F0032F9D6 /* FavoriteMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F75D4C82A3CA58F0032F9D6 /* FavoriteMovieCell.xib */; };
 		4F8191E42A349BC200719B54 /* darkLoadingLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F8191E22A349BC200719B54 /* darkLoadingLottie.json */; };
 		4F8191E52A349BC200719B54 /* lightLoadingLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F8191E32A349BC200719B54 /* lightLoadingLottie.json */; };
 		4F8192242A35546D00719B54 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F81921F2A35533600719B54 /* Poppins-ExtraBoldItalic.ttf */; };
@@ -88,6 +94,12 @@
 		4F6797A22A33EBB6007E4EA9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4F6797A32A33EBB6007E4EA9 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		4F6797AB2A33F5D6007E4EA9 /* LottieAnimationView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LottieAnimationView + Extension.swift"; sourceTree = "<group>"; };
+		4F75D4B72A3C5F5D0032F9D6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		4F75D4C12A3C8C580032F9D6 /* BottomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCell.swift; sourceTree = "<group>"; };
+		4F75D4C22A3C8C580032F9D6 /* BottomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomCell.xib; sourceTree = "<group>"; };
+		4F75D4C52A3C94460032F9D6 /* UITableView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView + Extension.swift"; sourceTree = "<group>"; };
+		4F75D4C72A3CA58F0032F9D6 /* FavoriteMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMovieCell.swift; sourceTree = "<group>"; };
+		4F75D4C82A3CA58F0032F9D6 /* FavoriteMovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteMovieCell.xib; sourceTree = "<group>"; };
 		4F8191E22A349BC200719B54 /* darkLoadingLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = darkLoadingLottie.json; sourceTree = "<group>"; };
 		4F8191E32A349BC200719B54 /* lightLoadingLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lightLoadingLottie.json; sourceTree = "<group>"; };
 		4F8192112A35533500719B54 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -155,6 +167,8 @@
 			children = (
 				4F073A092A37395700559A5C /* TopCell.swift */,
 				4F073A0A2A37395700559A5C /* TopCell.xib */,
+				4F75D4C12A3C8C580032F9D6 /* BottomCell.swift */,
+				4F75D4C22A3C8C580032F9D6 /* BottomCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -162,6 +176,7 @@
 		4F073A122A377F1200559A5C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4F75D4B72A3C5F5D0032F9D6 /* UserModel.swift */,
 				4F073A102A377F0F00559A5C /* MovieModel.swift */,
 			);
 			path = Models;
@@ -293,8 +308,18 @@
 			children = (
 				4F6797AB2A33F5D6007E4EA9 /* LottieAnimationView + Extension.swift */,
 				4FA3EAEF2A36242200498942 /* UIViewController + Extension.swift */,
+				4F75D4C52A3C94460032F9D6 /* UITableView + Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4F75D4CB2A3CA5930032F9D6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4F75D4C72A3CA58F0032F9D6 /* FavoriteMovieCell.swift */,
+				4F75D4C82A3CA58F0032F9D6 /* FavoriteMovieCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		4F8191EA2A354F3700719B54 /* Fonts */ = {
@@ -356,6 +381,7 @@
 			children = (
 				4FA3EB042A368B6800498942 /* FavoritesViewController.swift */,
 				4FA3EB052A368B6800498942 /* FavoritesViewController.xib */,
+				4F75D4CB2A3CA5930032F9D6 /* Cell */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -489,9 +515,11 @@
 				4F8192312A35546D00719B54 /* Poppins-ExtraLight.ttf in Resources */,
 				4F81922C2A35546D00719B54 /* Poppins-Medium.ttf in Resources */,
 				4FB3AE152A39D6E30011C913 /* Assets.xcassets in Resources */,
+				4F75D4CA2A3CA58F0032F9D6 /* FavoriteMovieCell.xib in Resources */,
 				4FA3EB072A368B6800498942 /* FavoritesViewController.xib in Resources */,
 				4F8192322A35546D00719B54 /* Poppins-Black.ttf in Resources */,
 				4F8191E52A349BC200719B54 /* lightLoadingLottie.json in Resources */,
+				4F75D4C42A3C8C580032F9D6 /* BottomCell.xib in Resources */,
 				4F81922A2A35546D00719B54 /* Poppins-MediumItalic.ttf in Resources */,
 				4F6797872A33E20E007E4EA9 /* LaunchScreen.storyboard in Resources */,
 				4F8192362A35594800719B54 /* buttonLottie.json in Resources */,
@@ -561,13 +589,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F75D4C62A3C94460032F9D6 /* UITableView + Extension.swift in Sources */,
 				4F073A112A377F0F00559A5C /* MovieModel.swift in Sources */,
+				4F75D4B82A3C5F5D0032F9D6 /* UserModel.swift in Sources */,
 				4FA3EB022A368B3300498942 /* SearchViewController.swift in Sources */,
 				4FF103412A360E790070332D /* SignInViewController.swift in Sources */,
 				4F6797A42A33EBB6007E4EA9 /* SignUpViewController.swift in Sources */,
 				4FA3EAF02A36242200498942 /* UIViewController + Extension.swift in Sources */,
+				4F75D4C32A3C8C580032F9D6 /* BottomCell.swift in Sources */,
 				4F6797AC2A33F5D6007E4EA9 /* LottieAnimationView + Extension.swift in Sources */,
 				4F073A0B2A37395700559A5C /* TopCell.swift in Sources */,
+				4F75D4C92A3CA58F0032F9D6 /* FavoriteMovieCell.swift in Sources */,
 				4FA3EB0A2A368B7600498942 /* ProfileViewController.swift in Sources */,
 				4FA3EB062A368B6800498942 /* FavoritesViewController.swift in Sources */,
 				4F67977B2A33E20D007E4EA9 /* AppDelegate.swift in Sources */,

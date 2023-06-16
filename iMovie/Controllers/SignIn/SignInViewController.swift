@@ -51,10 +51,18 @@ class SignInViewController: UIViewController {
             switch result {
                 
             case .success(let user):
-                print("Success")
-                let viewController = TabBarController(user: user)
-                viewController.modalPresentationStyle = .overFullScreen
-                self.present(viewController, animated: true)
+                print("Login - Success")
+                FireStoreService.shared.getUserData(user: user) { result in
+                    switch result {
+                        
+                    case .success(let user):
+                        let viewController = TabBarController(user: user)
+                        viewController.modalPresentationStyle = .overFullScreen
+                        self.present(viewController, animated: true)
+                    case .failure(let error):
+                        print("We have not received user data - \(error.localizedDescription)")
+                    }
+                }
             case .failure(let error):
                 print("Login Error")
                 self.showAlert(title: "Something was wrong!", message: error.localizedDescription)

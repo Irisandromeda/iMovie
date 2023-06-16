@@ -13,6 +13,18 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     private let topCellId = "TopCell"
+    private let bottomCellId = "BottomCell"
+    
+    private var currentUser: UserModel
+    
+    init(user: UserModel) {
+        self.currentUser = user
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +35,7 @@ class ProfileViewController: UIViewController {
     
     private func setupTableView() {
         tableView.register(UINib(nibName: "TopCell", bundle: nil), forCellReuseIdentifier: topCellId)
+        tableView.register(UINib(nibName: "BottomCell", bundle: nil), forCellReuseIdentifier: bottomCellId)
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -41,7 +54,7 @@ class ProfileViewController: UIViewController {
 
 extension ProfileViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,7 +62,12 @@ extension ProfileViewController: UITableViewDataSource {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: topCellId) as? TopCell else { return UITableViewCell() }
             
-            cell.contentView.layoutMargins = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+            cell.name.text = currentUser.username
+            cell.email.text = currentUser.email
+            
+            return cell
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: bottomCellId) as? BottomCell else { return UITableViewCell() }
             
             return cell
         default:
@@ -66,9 +84,10 @@ extension ProfileViewController: UITableViewDelegate {
 
         case 0:
             return CGFloat(200)
-
+        case 1:
+            return CGFloat(55)
         default:
-            return CGFloat(200)
+            return 0
         }
     }
 }

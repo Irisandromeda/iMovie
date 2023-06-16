@@ -12,6 +12,8 @@ class TopCell: UITableViewCell {
     
     //Outlets
     @IBOutlet weak var profileAnimation: LottieAnimationView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var email: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -53,8 +53,17 @@ class SignUpViewController: UIViewController {
             switch result {
                 
             case .success(let user):
-                print(user.email!)
+                print("Registration Success with E-mail - \(user.email!), ID - \(user.uid)")
                 AuthService.service.confirmEmail()
+                FireStoreService.shared.saveUserData(userID: user.uid, email: user.email!, username: self.userNameTF.text!) { result in
+                    switch result {
+                        
+                    case .success(_):
+                        print("UserData - Saved")
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
+                }
                 self.successLottie.startLottieAnimation("successLottie", speed: 1, loopMode: .playOnce, contentMode: .scaleToFill)
             case .failure(let error):
                 print(error.localizedDescription)

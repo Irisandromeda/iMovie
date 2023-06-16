@@ -19,9 +19,9 @@ class SearchViewController: UIViewController {
     private let searchMovieCellId = "searchMovieCellId"
     private let searchHeaderCellId = "searchHeaderCellId"
     
-    private var currentUser: User
+    private var currentUser: UserModel
     
-    init(user: User) {
+    init(user: UserModel) {
         self.currentUser = user
         super.init(nibName: nil, bundle: nil)
     }

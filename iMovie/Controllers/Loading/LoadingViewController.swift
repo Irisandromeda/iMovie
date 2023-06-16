@@ -7,6 +7,7 @@
 
 import UIKit
 import Lottie
+import FirebaseAuth
 
 class LoadingViewController: UIViewController {
     
@@ -32,9 +33,27 @@ class LoadingViewController: UIViewController {
     }
     
     @objc private func startApplication() {
-        let viewController = SignUpViewController(nibName: "SignUpViewController", bundle: nil)
-        viewController.modalPresentationStyle = .overFullScreen
-        present(viewController, animated: true)
+        loginCheck()
+    }
+    
+    private func loginCheck() {
+        if let user = Auth.auth().currentUser {
+            FireStoreService.shared.getUserData(user: user) { result in
+                switch result {
+                    
+                case .success(let user):
+                    let viewController = TabBarController(user: user)
+                    viewController.modalPresentationStyle = .overFullScreen
+                    self.present(viewController, animated: true)
+                case .failure(_):
+                    print("The user is not authorized yet")
+                }
+            }
+        } else {
+            let viewController = SignUpViewController(nibName: "SignUpViewController", bundle: nil)
+            viewController.modalPresentationStyle = .overFullScreen
+            self.present(viewController, animated: true)
+        }
     }
 
 }

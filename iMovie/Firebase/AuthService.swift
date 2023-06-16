@@ -48,7 +48,7 @@ class AuthService {
                 return
             }
             
-            print("Success")
+            print("Confirm Email Address Link - sended")
         })
     }
     

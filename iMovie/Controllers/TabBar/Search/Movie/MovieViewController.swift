@@ -18,10 +18,10 @@ class MovieViewController: UIViewController {
     @IBOutlet weak var movieDescription: UITextView!
     @IBOutlet weak var movieImage: UIImageView!
     
-    private var currentUser: User
+    private var currentUser: UserModel
     private var movie: Movie
     
-    init(user: User, movie: Movie) {
+    init(user: UserModel, movie: Movie) {
         self.currentUser = user
         self.movie = movie
         super.init(nibName: nil, bundle: nil)
@@ -49,11 +49,11 @@ class MovieViewController: UIViewController {
     }
 
     @IBAction func saveMovieAction(_ sender: UIButton) {
-        FireStoreService.shared.saveFavoriteMovie(userId: currentUser.uid.description, movie: movie) { result in
+        FireStoreService.shared.saveFavoriteMovie(userId: currentUser.userID, movie: movie) { result in
             switch result {
                 
             case .success(_):
-                print("Success")
+                print("Movie - Saved")
             case .failure(let error):
                 self.showAlert(title: "Something was wrong!", message: error.localizedDescription)
             }
